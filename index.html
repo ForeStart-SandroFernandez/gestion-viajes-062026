@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Viajes - Acceso Privado</title>
+    <title>Gestión de Viajes</title>
     <style>
         body, html { 
             margin: 0; 
@@ -38,7 +38,7 @@
         input { 
             width: 85%; 
             padding: 12px; 
-            margin: 15px 0; 
+            margin: 10px 0; 
             font-size: 16px; 
             border-radius: 5px; 
             border: 1px solid #ccc; 
@@ -50,13 +50,15 @@
             font-size: 16px; 
             font-weight: bold;
             border-radius: 5px; 
-            background-color: #007bff; 
+            background-color: #546E7A;    /* Nuevo color */
             color: white; 
             cursor: pointer; 
             border: none; 
             transition: background 0.2s;
         }
-        button:hover { background-color: #0056b3; }
+        button:hover { 
+            background-color: #3f4f5f;    /* Tono más oscuro para el hover */
+        }
         .error-msg { color: red; font-size: 14px; margin-top: 10px; display: none; }
     </style>
 </head>
@@ -65,7 +67,9 @@
     <div id="login" class="login-container">
         <div class="login-box">
             <h3>Gestión de Viajes</h3>
-            <p style="color: #666; font-size: 14px;">Introduce la contraseña para acceder al sistema</p>
+            <p style="color: #666; font-size: 14px;">Introduce tus credenciales para acceder</p>
+            <!-- Nuevo campo usuario con valor por defecto -->
+            <input type="text" id="user" value="Administrador" placeholder="Usuario">
             <input type="password" id="pass" placeholder="Contraseña" onkeypress="checkEnter(event)">
             <button onclick="validar()">Ingresar</button>
             <div id="error" class="error-msg">Contraseña incorrecta</div>
